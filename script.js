@@ -13,7 +13,7 @@ app.config(function($routeProvider, $locationProvider) {
         })
         .otherwise({redirectTo: "/"});
 
-        $locationProvider.hashPrefix("");
+    $locationProvider.hashPrefix("");
 });
 
 app.controller("coolController", function($scope, $location, awesomeFactory) {
