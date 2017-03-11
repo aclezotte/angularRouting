@@ -24,7 +24,9 @@ app.controller("coolController", function($scope, $location, awesomeFactory) {
 
         awesomeFactory.pass(name, age, favFood);
 
-    };
+        $location.path("/saygoodbye");
+
+    }
 
 });
 
