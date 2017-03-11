@@ -16,12 +16,20 @@ app.config(function($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix("");
 });
 
-app.controller("coolController", function($scope) {
+app.controller("coolController", function($scope, $location, awesomeFactory) {
+
     $scope.sendInfo = function(name, age, favFood){
+
         console.log(name + " " + age + " " + favFood);
+
+        awesomeFactory.pass(name, age, favFood);
+
     };
+
 });
 
-app.controller("secondController", function($scope) {
-    $scope.moreCoolStuff = "This is more cool stuff";
+app.controller("secondController", function($scope, awesomeFactory) {
+
+    $scope.userInfo = awesomeFactory.bringItBack();
+
 });
