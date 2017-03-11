@@ -1,7 +1,7 @@
 var app = angular.module("coolApp", ["ngRoute"]);
 
 app.config(function($routeProvider, $locationProvider) {
-    
+
     $routeProvider
         .when("/sayhello", {
             controller: "coolController",
