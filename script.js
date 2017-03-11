@@ -8,7 +8,7 @@ app.config(function($routeProvider, $locationProvider) {
             templateUrl: "sayhello.html"
         })
         .when("/saygoodbye", {
-            controller: "coolController",
+            controller: "secondController",
             templateUrl: "saygoodbye.html"
         })
         .otherwise({redirectTo: "/"});
@@ -17,5 +17,11 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 app.controller("coolController", function($scope) {
+    $scope.sendInfo = function(name, age, favFood){
+        console.log(name + " " + age + " " + favFood);
+    };
+});
 
+app.controller("secondController", function($scope) {
+    $scope.moreCoolStuff = "This is more cool stuff";
 });
